@@ -14,7 +14,7 @@ export default function Post({ post }: PostProps) {
   return (
     <div>
       <Link to={`/user/${post.author}`} className="Post">
-        <a href="">{post.author}</a>
+         <p>{post.author}</p>
       </Link>
       <p>{post.body}</p>
       <p>

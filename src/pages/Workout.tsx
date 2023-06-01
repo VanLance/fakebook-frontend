@@ -10,7 +10,7 @@ export default function Workout() {
   //   setWorkouts([...workouts])
   // }
   return (
-    <Body sidebar>
+    <Body postForm sidebar>
       {workouts.map((workout) => (
         <Counter exercise={workout} key={workout}></Counter>
       ))}

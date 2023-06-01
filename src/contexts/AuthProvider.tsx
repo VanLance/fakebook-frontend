@@ -50,7 +50,6 @@ export default function AuthProvider({
     );
     if (res.ok) {
       const data = await res.json();
-      console.log(data);
       const token = data[0]['user token'];
       setToken({username:username, token:token, loggedIn:true})
       

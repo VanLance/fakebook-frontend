@@ -29,7 +29,7 @@ export default function LoginPage() {
   }
 
   return (
-    <Body sidebar={false}>
+    <Body postForm={false} sidebar={false}>
       <h2>LoginPage</h2>
       <form onSubmit={handleLoginForm}>
         <label>

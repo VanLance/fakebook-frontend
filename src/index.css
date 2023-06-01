@@ -1,0 +1,32 @@
+.Header {
+  border-bottom: 1px solid gray;
+}
+
+.Sidebar {
+  display:flex;
+  gap:10px;
+  width:120px;
+  margin : 5px;
+  position: sticky;
+  top:62px;
+  align-self: flex-start;
+  align-items: start;
+}
+
+.Sidebar .nav-item .active{
+  background-color: hotpink;
+}
+
+body{
+  color:white;
+  background-color: black;
+}
+
+.Content{
+  margin-top:10px;
+}
+
+
+.Post a:visited{
+  color:purple
+}

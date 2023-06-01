@@ -1,0 +1,34 @@
+// import { useState } from 'react'
+
+import Container from 'react-bootstrap/Container';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Header from './components/Header';
+import './index.css';
+import Workout from './pages/Workout';
+import LoginPage from './pages/LoginPage';
+import UserPage from './pages/UserPage';
+import Posts from './pages/Posts';
+import AuthProvider from './contexts/AuthProvider';
+import Logout from './components/Logout';
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <Container fluid className="App">
+        <Header />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Posts />} />
+            <Route path="/postpage" element={<Posts />} />
+            <Route path="/workouts" element={<Workout />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/user/:username" element={<UserPage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </BrowserRouter>
+      </Container>
+    </AuthProvider>
+  );
+}
+
